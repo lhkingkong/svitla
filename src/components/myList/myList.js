@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './myList.scss';
 
 class MyList extends Component{
     constructor(props){
@@ -48,9 +49,9 @@ class MyList extends Component{
 
     render(){
         return (
-            <div>
+            <div className="myList">
                 <input type="text" value={this.state.inputValue} onChange={this.onInputChange} onKeyPress={this.onType}/>
-                <button onClick={this.addItem}>Add</button>
+                <button onClick={this.addItem}>+</button>
                 <ul>
                     {
                         this.state.list.map((item, index)=>{
